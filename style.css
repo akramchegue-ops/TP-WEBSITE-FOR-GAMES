@@ -1,0 +1,466 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0b0b12;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #12121d;
+    padding: 15px 0;
+    border-bottom: 1px solid #292940;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 5px;
+}
+
+.nav-link:hover {
+    color: #8b5cf6 !important;
+}
+
+.hero {
+    min-height: 400px;
+    padding: 110px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #17152d, #090910);
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #9b6bff;
+}
+
+.hero p {
+    color: #c4c4d4;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    letter-spacing: 4px;
+    color: #a78bfa !important;
+}
+
+.game-section {
+    padding-top: 65px;
+    padding-bottom: 20px;
+    scroll-margin-top: 20px;
+}
+
+.game-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    border-left: 5px solid #8b5cf6;
+    padding-left: 12px;
+}
+
+.description {
+    color: #aaaabb;
+    margin: 15px 0 25px;
+}
+
+.game-card {
+    background-color: #171722;
+    border: 1px solid #29293b;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    height: 100%;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-7px);
+    border-color: #8b5cf6;
+}
+
+.game-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    background-color: #252536;
+}
+
+.game-info {
+    padding: 18px;
+}
+
+.game-info h3 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.game-info p {
+    color: #b8b8c8;
+    min-height: 45px;
+}
+
+.game-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.game-buttons a {
+    text-decoration: none;
+    font-size: 13px;
+    padding: 9px 12px;
+    border-radius: 6px;
+}
+
+.trailer-btn {
+    color: white;
+    border: 1px solid #8b5cf6;
+}
+
+.trailer-btn:hover {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.download-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 18px;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(135deg, #087cff, #5146e5);
+    border: 1px solid #489aff;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 124, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, #169bff, #7165ff);
+    box-shadow: 0 0 22px rgba(22, 155, 255, 0.5);
+    transform: translateY(-3px);
+    color: white;
+}
+
+#noResults {
+    display: none;
+    padding: 35px;
+    color: #aaaabb;
+}
+
+footer {
+    background-color: #12121d;
+    text-align: center;
+    padding: 35px 10px;
+    margin-top: 70px;
+    border-top: 1px solid #292940;
+}
+
+footer p {
+    color: #aaaabb;
+    margin: 8px;
+}
+
+/* TRENDING */
+
+.trending {
+    padding: 40px 20px;
+    overflow: hidden;
+}
+
+.trending h2 {
+    color: white;
+    font-size: 28px;
+}
+
+.trending p {
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 380px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 15px;
+    flex: 0 0 380px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    background: #008cff;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background: #005bbb;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* MAIN GAME IMAGE */
+
+.main-photo {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* GAMEPLAY SCREENSHOTS */
+
+.gameplay {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.gameplay img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* GAME TRAILER */
+
+.game-trailer {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: black;
+    border-radius: 12px;
+    margin: 10px 0 20px;
+}
+
+/* DOWNLOAD BUTTON */
+
+.download-icon {
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.15);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.download-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.download-text strong {
+    font-size: 16px;
+}
+
+.download-text small {
+    font-size: 11px;
+    color: #dbeaff;
+}
+
+.download-arrow {
+    font-size: 24px;
+    transition: transform 0.3s ease;
+}
+
+.download-btn:hover .download-arrow {
+    transform: translateX(5px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 650px) {
+
+    .main-photo {
+        height: 210px;
+    }
+
+    .gameplay img {
+        height: 85px;
+    }
+
+    .game-trailer {
+        height: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .game-section h2 {
+        font-size: 25px;
+    }
+
+    .game-image {
+        height: 210px;
+    }
+
+    .slides img {
+        width: 280px;
+        height: 190px;
+        flex-basis: 280px;
+    }
+}
+/* FIX SLIDER */
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    width: max-content;
+}
+
+.slides img {
+    width: 380px;
+    height: 240px;
+    flex: 0 0 380px;
+    object-fit: cover;
+    border-radius: 15px;
+    max-width: none;
+    transform: none;
+}
+
+/* FIX GAME CARDS */
+
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.games-container .game-card {
+    min-width: 0;
+    height: auto;
+    padding: 20px;
+}
+
+.games-container .game-card:hover {
+    transform: none;
+}
+
+.main-photo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.gameplay img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.main-photo:hover,
+.gameplay img:hover,
+.slides img:hover {
+    transform: none;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .games-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+
+    .slides img {
+        width: 280px;
+        height: 190px;
+        flex-basis: 280px;
+    }
+}
+.games-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.games-container .game-card {
+    min-width: 0;
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .games-container {
+        grid-template-columns: 1fr;
+    }
+}
